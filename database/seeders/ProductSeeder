@@ -1,0 +1,93 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Product;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ProductSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $products = [
+            [
+                'name' => 'Chocolate Cake',
+                'description' => 'Delicious chocolate cake with rich cocoa flavor and creamy frosting. Perfect for any celebration.',
+                'price' => 150000,
+                'stock' => 25,
+                'image' => null,
+            ],
+            [
+                'name' => 'Strawberry Cupcake',
+                'description' => 'Sweet and fluffy cupcakes topped with fresh strawberry cream and strawberry pieces.',
+                'price' => 35000,
+                'stock' => 50,
+                'image' => null,
+            ],
+            [
+                'name' => 'Vanilla Cookies',
+                'description' => 'Crispy vanilla cookies with a sweet and aromatic taste. Great for snacking.',
+                'price' => 25000,
+                'stock' => 100,
+                'image' => null,
+            ],
+            [
+                'name' => 'Caramel Candy',
+                'description' => 'Soft and chewy caramel candies with a rich buttery flavor.',
+                'price' => 15000,
+                'stock' => 75,
+                'image' => null,
+            ],
+            [
+                'name' => 'Rainbow Lollipop',
+                'description' => 'Colorful rainbow lollipops with multiple fruit flavors in every lick.',
+                'price' => 8000,
+                'stock' => 200,
+                'image' => null,
+            ],
+            [
+                'name' => 'Dark Chocolate Bar',
+                'description' => 'Premium dark chocolate bar with 70% cocoa content. Rich and intense flavor.',
+                'price' => 45000,
+                'stock' => 60,
+                'image' => null,
+            ],
+            [
+                'name' => 'Honey Donuts',
+                'description' => 'Soft and fluffy donuts glazed with natural honey. Sweet and satisfying.',
+                'price' => 20000,
+                'stock' => 40,
+                'image' => null,
+            ],
+            [
+                'name' => 'Gummy Bears',
+                'description' => 'Colorful and chewy gummy bears in assorted fruit flavors. Fun for all ages.',
+                'price' => 12000,
+                'stock' => 150,
+                'image' => null,
+            ],
+            [
+                'name' => 'Tiramisu Slice',
+                'description' => 'Classic Italian tiramisu with coffee-soaked ladyfingers and mascarpone cream.',
+                'price' => 55000,
+                'stock' => 20,
+                'image' => null,
+            ],
+            [
+                'name' => 'Cotton Candy',
+                'description' => 'Light and fluffy cotton candy that melts in your mouth. Available in pink and blue.',
+                'price' => 10000,
+                'stock' => 80,
+                'image' => null,
+            ],
+        ];
+
+        foreach ($products as $product) {
+            Product::create($product);
+        }
+    }
+}
